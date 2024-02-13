@@ -35,7 +35,7 @@ function App() {
           <Heading>My Poem Finder</Heading>
           <FaBookOpen />
         </HStack>
-        <HStack padding="10px">
+        <HStack justify="center" padding="10px">
           <SortSelector
             sortOrder={poemQuery.sortOrder}
             onSelectSortOrder={(sortOrder) =>
