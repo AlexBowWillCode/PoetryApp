@@ -1,4 +1,11 @@
-import { Grid, GridItem, HStack, Heading, VStack } from "@chakra-ui/react";
+import {
+  Center,
+  Grid,
+  GridItem,
+  HStack,
+  Heading,
+  VStack,
+} from "@chakra-ui/react";
 import "./App.css";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
@@ -23,12 +30,12 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <HStack padding="10px">
+        <HStack justify="center" padding="10px">
           <FaBookOpen />
           <Heading>My Poem Finder</Heading>
           <FaBookOpen />
         </HStack>
-        <HStack padding="10px" justify="center">
+        <HStack padding="10px">
           <SortSelector
             sortOrder={poemQuery.sortOrder}
             onSelectSortOrder={(sortOrder) =>
