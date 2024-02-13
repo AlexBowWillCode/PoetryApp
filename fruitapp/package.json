@@ -15,9 +15,12 @@
     "@emotion/styled": "^11.11.0",
     "@tanstack/react-query": "^5.20.1",
     "@tanstack/react-query-devtools": "^5.20.1",
+    "@types/ms": "^0.7.34",
+    "axios": "^1.6.7",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
