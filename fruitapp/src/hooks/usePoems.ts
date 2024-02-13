@@ -15,13 +15,14 @@ const usePoems = (peomQuery: PeomQuery) => {
     ? peomQuery.searchQuery
     : "Ozymandias";
 
-  const order = undefined ? peomQuery.sortOrder : "title";
+  const order = peomQuery.sortOrder || "title";
 
   const searchQuery = order + "/" + searchName;
   return useQuery<Poem[], Error>({
     queryKey: ["peoms", peomQuery],
 
     queryFn: () => apiClient.getAll(searchQuery),
+    staleTime: 1 * 10 * 60 * 1000, //10m
   });
 };
 

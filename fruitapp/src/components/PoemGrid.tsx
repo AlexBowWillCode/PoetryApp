@@ -20,9 +20,9 @@ interface Props {
 const PoemGrid = ({ poemQuery }: Props) => {
   const { data, error, isLoading } = usePoems(poemQuery);
 
-  if (isLoading) return <Text>Loading ...</Text>;
+  if (error) return <Text marginLeft={10}>{error.message}</Text>;
 
-  if (error) return <p>{error.message}</p>;
+  if (isLoading) return <Text marginLeft={10}>Loading ...</Text>;
 
   return (
     <SimpleGrid columns={{ sm: 1, md: 1, lg: 1 }} padding="10px" spacing={6}>

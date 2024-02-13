@@ -1,9 +1,10 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Heading, VStack } from "@chakra-ui/react";
 import "./App.css";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import PoemGrid from "./components/PoemGrid";
 import SortSelector from "./components/SortSelector";
+import { FaBookOpen } from "react-icons/fa6";
 
 export interface PeomQuery {
   searchQuery: string;
@@ -22,17 +23,24 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar
-          onSearch={(searchQuery) =>
-            setPoemQuery({ ...poemQuery, searchQuery })
-          }
-        />
-        <SortSelector
-          sortOrder={poemQuery.sortOrder}
-          onSelectSortOrder={(sortOrder) =>
-            setPoemQuery({ ...poemQuery, sortOrder })
-          }
-        />
+        <HStack padding="10px">
+          <FaBookOpen />
+          <Heading>My Poem Finder</Heading>
+          <FaBookOpen />
+        </HStack>
+        <HStack padding="10px" justify="center">
+          <SortSelector
+            sortOrder={poemQuery.sortOrder}
+            onSelectSortOrder={(sortOrder) =>
+              setPoemQuery({ ...poemQuery, sortOrder })
+            }
+          />
+          <NavBar
+            onSearch={(searchQuery) =>
+              setPoemQuery({ ...poemQuery, searchQuery })
+            }
+          />
+        </HStack>
       </GridItem>
       <GridItem area="main" marginBottom={1000}>
         <PoemGrid poemQuery={poemQuery}></PoemGrid>
