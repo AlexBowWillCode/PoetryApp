@@ -23,12 +23,7 @@ const PoemGrid = ({ poemQuery }: Props) => {
       </>
     );
 
-  if (isLoading)
-    return (
-      <>
-        <Text marginLeft={3}>Loading ...</Text>
-      </>
-    );
+  if (isLoading) return <></>;
 
   return (
     <SimpleGrid
