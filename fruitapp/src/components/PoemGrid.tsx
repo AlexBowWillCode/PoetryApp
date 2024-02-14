@@ -22,22 +22,27 @@ const PoemGrid = ({ poemQuery }: Props) => {
 
   if (error)
     return (
-      <Text marginLeft={650} marginRight={650}>
-        {error.message}
-      </Text>
+      <>
+        <Text marginLeft={3}>{error.message}</Text>;
+      </>
     );
 
   if (isLoading)
     return (
-      <Text marginLeft={650} marginRight={650}>
-        Loading ...
-      </Text>
+      <>
+        <Text marginLeft={3}>Loading ...</Text>
+      </>
     );
 
   return (
-    <SimpleGrid columns={{ sm: 1, md: 1, lg: 1 }} padding="10px" spacing={6}>
+    <SimpleGrid
+      columns={{ sm: 1, md: 1, lg: 1 }}
+      padding="10px"
+      justifyContent="center"
+      spacing={6}
+    >
       {data?.map((poem) => (
-        <Card key={poem.title}>
+        <Card width="100%" key={poem.title}>
           <CardBody>
             <VStack>
               <Heading fontSize="2xl">{poem.title}</Heading>

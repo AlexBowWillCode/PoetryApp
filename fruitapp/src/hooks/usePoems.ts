@@ -22,7 +22,7 @@ const usePoems = (peomQuery: PeomQuery) => {
     queryKey: ["peoms", peomQuery],
 
     queryFn: () => apiClient.getAll(searchQuery),
-    staleTime: 1 * 10 * 60 * 1000, //10m
+    staleTime: 10 * 60 * 1000, //10m
   });
 };
 
