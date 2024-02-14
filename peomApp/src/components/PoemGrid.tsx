@@ -1,16 +1,12 @@
 import {
-  Box,
   Card,
   CardBody,
-  HStack,
   Heading,
   SimpleGrid,
-  Spinner,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import { PeomQuery } from "../App";
-import React from "react";
 import usePoems from "../hooks/usePoems";
 
 interface Props {

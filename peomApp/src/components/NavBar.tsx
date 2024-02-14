@@ -1,4 +1,3 @@
-import { HStack } from "@chakra-ui/react";
 import SearchInput from "./SearchInput";
 
 interface Props {

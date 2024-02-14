@@ -1,17 +1,10 @@
-import {
-  Center,
-  Grid,
-  GridItem,
-  HStack,
-  Heading,
-  VStack,
-} from "@chakra-ui/react";
-import "./App.css";
+import { Grid, GridItem, HStack, Heading } from "@chakra-ui/react";
 import { useState } from "react";
+import { FaBookOpen } from "react-icons/fa6";
+import "./App.css";
 import NavBar from "./components/NavBar";
 import PoemGrid from "./components/PoemGrid";
 import SortSelector from "./components/SortSelector";
-import { FaBookOpen } from "react-icons/fa6";
 
 export interface PeomQuery {
   searchQuery: string;
